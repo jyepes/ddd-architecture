@@ -4,10 +4,9 @@ using System.Text;
 using Domain.Entity;
 using System.Threading.Tasks;
 
-namespace Infraestructure.Interface
+namespace Domain.Interface
 {
-    
-    public interface ICustomerRepository
+    public interface ICustomerDomain
     {
         #region Métodos síncronos
 
@@ -21,13 +20,12 @@ namespace Infraestructure.Interface
 
         #region Métodos asíncronos
 
-            Task<bool> InsertAsync(Customer customer);
-            Task<bool> UpdateAsync(Customer customer);
-            Task<bool> DeleteAsync(string customerID);
-            Task<Customer> GetCustomerByIdAsync(string customerId);
-            Task<IEnumerable<Customer>> GetAllAsync();
+        Task<bool> InsertAsync(Customer customer);
+        Task<bool> UpdateAsync(Customer customer);
+        Task<bool> DeleteAsync(string customerID);
+        Task<Customer> GetCustomerByIdAsync(string customerId);
+        Task<IEnumerable<Customer>> GetAllAsync();
 
         #endregion
-
     }
 }
