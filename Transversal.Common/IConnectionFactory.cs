@@ -1,9 +1,8 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 
 namespace Transversal.Common
 {
-    public class IConnectionFactory
+    public interface IConnectionFactory
     {
         IDbConnection GetConnection { get; }
     }
