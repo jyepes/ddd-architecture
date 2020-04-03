@@ -23,9 +23,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Entity", "Domain.Ent
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestructure.Repository", "Infraestructure.Repository\Infraestructure.Repository.csproj", "{263D373C-618B-47E6-8E28-17BA6DAE6602}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Interface", "Domain.Interface\Domain.Interface.csproj", "{75943F70-4910-4590-BA9A-ECF1D35BB3C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Interface", "Domain.Interface\Domain.Interface.csproj", "{75943F70-4910-4590-BA9A-ECF1D35BB3C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Core", "Domain.Core\Domain.Core.csproj", "{836D11B2-5985-4684-8A42-F719306F4BD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Core", "Domain.Core\Domain.Core.csproj", "{836D11B2-5985-4684-8A42-F719306F4BD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.DTO", "Application.DTO\Application.DTO.csproj", "{9A0E7AAE-257D-4481-BCFE-0C52CD072735}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transversal.Mapper", "Transversal.Mapper\Transversal.Mapper.csproj", "{58111E48-8D2B-48E6-BA33-02523A8FBEB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Interface", "Application.Interface\Application.Interface.csproj", "{F57CF06E-B48F-42F1-861E-6478D4C92D8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Main", "Application.Main\Application.Main.csproj", "{021B8301-BC3F-4680-9F96-4DCCA9EB0299}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +69,22 @@ Global
 		{836D11B2-5985-4684-8A42-F719306F4BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{836D11B2-5985-4684-8A42-F719306F4BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{836D11B2-5985-4684-8A42-F719306F4BD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A0E7AAE-257D-4481-BCFE-0C52CD072735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A0E7AAE-257D-4481-BCFE-0C52CD072735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A0E7AAE-257D-4481-BCFE-0C52CD072735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A0E7AAE-257D-4481-BCFE-0C52CD072735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58111E48-8D2B-48E6-BA33-02523A8FBEB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58111E48-8D2B-48E6-BA33-02523A8FBEB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58111E48-8D2B-48E6-BA33-02523A8FBEB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58111E48-8D2B-48E6-BA33-02523A8FBEB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F57CF06E-B48F-42F1-861E-6478D4C92D8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57CF06E-B48F-42F1-861E-6478D4C92D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57CF06E-B48F-42F1-861E-6478D4C92D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57CF06E-B48F-42F1-861E-6478D4C92D8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{021B8301-BC3F-4680-9F96-4DCCA9EB0299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{021B8301-BC3F-4680-9F96-4DCCA9EB0299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{021B8301-BC3F-4680-9F96-4DCCA9EB0299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{021B8301-BC3F-4680-9F96-4DCCA9EB0299}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +97,10 @@ Global
 		{263D373C-618B-47E6-8E28-17BA6DAE6602} = {1DCDAE3E-5F10-40CE-9ED2-2473520D0AC7}
 		{75943F70-4910-4590-BA9A-ECF1D35BB3C7} = {ACB6A170-868C-49DB-A19F-8E9E7A921475}
 		{836D11B2-5985-4684-8A42-F719306F4BD9} = {ACB6A170-868C-49DB-A19F-8E9E7A921475}
+		{9A0E7AAE-257D-4481-BCFE-0C52CD072735} = {E1566FB9-5E73-41AE-9151-CDE7C5ABA4D8}
+		{58111E48-8D2B-48E6-BA33-02523A8FBEB7} = {C406343B-8A5E-4E36-928B-B54A8BB91F42}
+		{F57CF06E-B48F-42F1-861E-6478D4C92D8E} = {E1566FB9-5E73-41AE-9151-CDE7C5ABA4D8}
+		{021B8301-BC3F-4680-9F96-4DCCA9EB0299} = {E1566FB9-5E73-41AE-9151-CDE7C5ABA4D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {701036C2-3E0A-4645-8E7E-57CCBCBE8E8E}
