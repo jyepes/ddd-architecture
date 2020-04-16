@@ -14,11 +14,12 @@ namespace Application.Main
     {
         private readonly ICustomerDomain customerDomain;
         private readonly IMapper mapper;
-
-        public CustomerApplication(ICustomerDomain _customerDomain, IMapper _mapper)
+        private readonly IAppLogger<CustomerApplication> logger;
+        public CustomerApplication(ICustomerDomain _customerDomain, IMapper _mapper, IAppLogger<CustomerApplication> _logger)
         {
             customerDomain = _customerDomain;
             mapper = _mapper;
+            logger = _logger;
         }
 
         #region Métodos síncronos
@@ -33,12 +34,14 @@ namespace Application.Main
                 {
                     response.IsSuccess = true;
                     response.Message = "Ok";
+                    logger.LogInformation("Se se ha creado el cliente de forma exitosa");
                 }
 
             }
             catch (Exception ex)
             {
                 response.Message = ex.Message;
+                logger.LogError(ex.Message);
             }
 
             return response;
@@ -55,11 +58,13 @@ namespace Application.Main
                 {
                     response.IsSuccess = true;
                     response.Message = "Ok";
+                    logger.LogInformation("Se actualizó el cliente de forma exitosa");
                 }
             }
             catch (Exception ex)
             {
                 response.Message = ex.Message;
+                logger.LogError(ex.Message);
             }
 
             return response;
@@ -75,12 +80,14 @@ namespace Application.Main
                 {
                     response.IsSuccess = true;
                     response.Message = "Ok";
+                    logger.LogInformation("Se eliminó el cliente de forma exitosa");
                 }
 
             }
             catch (Exception ex)
             {
                 response.Message = ex.Message;
+                logger.LogError(ex.Message);
             }
 
             return response;
@@ -95,15 +102,15 @@ namespace Application.Main
                 response.Data = mapper.Map<IEnumerable<CustomerDto>>(customers);
                 if (response.Data != null)
                 {
-
+                    response.IsSuccess = true;
+                    response.Message = "Ok";                
+                    logger.LogInformation("Se ejecutó la consulta de forma exitosa");
                 }
-                response.IsSuccess = true;
-                response.Message = "Ok";
-
             }
             catch (Exception ex)
             {
                 response.Message = ex.Message;
+                logger.LogError(ex.Message);
             }
 
             return response;
@@ -120,11 +127,13 @@ namespace Application.Main
                 {
                     response.IsSuccess = true;
                     response.Message = "Ok";
+                    logger.LogInformation("Se ejecutó la consulta de forma exitosa");
                 }
             }
             catch (Exception ex)
             {
                 response.Message = ex.Message;
+                logger.LogError(ex.Message);
             }
 
             return response;
