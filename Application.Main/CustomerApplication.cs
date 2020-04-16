@@ -153,12 +153,14 @@ namespace Application.Main
                 {
                     response.IsSuccess = true;
                     response.Message = "Ok";
+                    logger.LogInformation("Se se ha creado el cliente de forma exitosa");
                 }
 
             }
             catch (Exception ex)
             {
                 response.Message = ex.Message;
+                logger.LogError(ex.Message);
             }
 
             return response;
@@ -175,11 +177,13 @@ namespace Application.Main
                 {
                     response.IsSuccess = true;
                     response.Message = "Ok";
+                    logger.LogInformation("Se se ha actualizado el cliente de forma exitosa");
                 }
             }
             catch (Exception ex)
             {
                 response.Message = ex.Message;
+                logger.LogError(ex.Message);
             }
 
             return response;
@@ -195,12 +199,14 @@ namespace Application.Main
                 {
                     response.IsSuccess = true;
                     response.Message = "Ok";
+                    logger.LogInformation("Se se ha eliminado el cliente de forma exitosa");
                 }
 
             }
             catch (Exception ex)
             {
                 response.Message = ex.Message;
+                logger.LogError(ex.Message);
             }
 
             return response;
@@ -216,15 +222,15 @@ namespace Application.Main
                 response.Data = mapper.Map<IEnumerable<CustomerDto>>(customers);
                 if (response.Data != null)
                 {
-
+                    response.IsSuccess = true;
+                    response.Message = "Ok";
+                    logger.LogInformation("Se ejecutó la consulta de forma exitosa");
                 }
-                response.IsSuccess = true;
-                response.Message = "Ok";
-
             }
             catch (Exception ex)
             {
                 response.Message = ex.Message;
+                logger.LogError(ex.Message);
             }
 
             return response;
@@ -243,11 +249,13 @@ namespace Application.Main
                 {
                     response.IsSuccess = true;
                     response.Message = "Ok";
+                    logger.LogInformation("Se ejecutó la consulta de forma exitosa");
                 }
             }
             catch (Exception ex)
             {
                 response.Message = ex.Message;
+                logger.LogError(ex.Message);
             }
 
             return response;
